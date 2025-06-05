@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    padding: 2rem;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.left-img {
+    float: left;
+    margin-right: 10px;
+}
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+
+.column {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+}
+
+/*4.Include and apply a custom web font using @font-face in your CSS. */
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/MyFont.woff2') format('woff2');
+}
+
+body {
+    font-family: 'MyFont', sans-serif;
+}
+
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip::after {
+    content: "Tooltip Text";
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 10px;
+    background: #333;
+    color: #fff;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    border-radius: 5px;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+}
