@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 1.Build a responsive navigation bar using the <nav> element that collapses into a hamburger menu on mobile. -->
+    <nav class="navbar">
+      <div class="brand">MySite</div>
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- 2.Create a blog post layout using <article>, <section>, <aside>, and <figure> with a caption. -->
+    <article>
+      <h2>Blog Title</h2>
+      <section>Content section</section>
+      <aside>Author info</aside>
+      <figure>
+        <img src="image.jpg" alt="Blog image" />
+        <figcaption>Image caption</figcaption>
+      </figure>
+    </article>
+
+    <!-- 3.Embed a video with <video> and <track> elements, ensuring captions display correctly. -->
+    <video controls>
+      <source src="demo.mp4" type="video/mp4" />
+      <track src="captions.vtt" kind="subtitles" srclang="en" label="English" />
+    </video>
+
+    <!-- 4.Implement responsive images with <picture>, srcset, and sizes attributes for desktop and mobile viewports. -->
+    <picture>
+      <source srcset="desktop.jpg" media="(min-width: 768px)" />
+      <source srcset="mobile.jpg" media="(max-width: 767px)" />
+      <img src="fallback.jpg" alt="Responsive Image" />
+    </picture>
+
+    <!-- 5.Add a hidden “Skip to Content” link at the top of the page that becomes visible on keyboard focus. -->
+    <a href="#main-content" class="skip-link">Skip to Content</a>
+    <main id="main-content">...</main>
+
+      <script src="script.js"></script>
+  </body>
+</html>
