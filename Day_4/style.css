@@ -1,0 +1,148 @@
+/* 1.Build a 12-column responsive grid system using CSS Grid with named grid areas. */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "header header header header header header header header header header header header"
+        "nav nav nav nav main main main main sidebar sidebar sidebar sidebar"
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+    gap: 10px;
+}
+
+.header {
+    grid-area: header;
+    background: #ccc;
+    padding: 1em;
+}
+
+.nav {
+    grid-area: nav;
+    background: #add8e6;
+    padding: 1em;
+}
+
+.main {
+    grid-area: main;
+    background: #90ee90;
+    padding: 1em;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #ffa07a;
+    padding: 1em;
+}
+
+.footer {
+    grid-area: footer;
+    background: #f08080;
+    padding: 1em;
+}
+
+/* 2.Create a dark/light theme switcher using CSS variables and the prefers-color-scheme media feature. */
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1e1e1e;
+        --text-color: #ffffff;
+    }
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+/* 3.Implement a scrollable image carousel with CSS Scroll Snap Points. */
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.carousel img {
+    width: 600px;
+    height: 200px;
+    background-color: #90ee90;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    border-radius: 8px;
+}
+
+/* 4.Use @media queries to adjust layout at three distinct breakpoints. */
+
+/* Base styles already defined in grid layout */
+
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-areas:
+            "header header header header header header header header header header header header"
+            "nav nav nav nav nav nav nav nav nav nav nav nav"
+            "main main main main main main main main sidebar sidebar sidebar sidebar"
+            "footer footer footer footer footer footer footer footer footer footer footer footer";
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+            "header header header header header header header header header header header header"
+            "nav nav nav nav nav nav nav nav nav nav nav nav"
+            "main main main main main main main main main main main main"
+            "footer footer footer footer footer footer footer footer footer footer footer footer";
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        display: block;
+    }
+
+    .grid-container>* {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* 5.Animate a button’s hover effect using transition and transform properties. */
+
+.animated-btn {
+    padding: 1rem 2rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.animated-btn:hover {
+    transform: scale(1.05) rotate(-2deg);
+    background-color: #0056b3;
+}

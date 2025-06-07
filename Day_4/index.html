@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 1.Build a 12-column responsive grid system using CSS Grid with named grid areas. -->
+    <div class="grid-container">
+      <header class="header">Header</header>
+      <nav class="nav">Navigation</nav>
+      <main class="main">Main Content</main>
+      <aside class="sidebar">Sidebar</aside>
+      <footer class="footer">Footer</footer>
+    </div>
+
+    <!-- 2.Create a dark/light theme switcher using CSS variables and the prefers-color-scheme media feature. -->
+    <button class="theme-toggle">Toggle Theme</button>
+
+    <!-- 3.Implement a scrollable image carousel with CSS Scroll Snap Points. -->
+    <section class="carousel">
+      <img src="" alt="Image 1" />
+      <img src="" alt="Image 2" />
+      <img src="" alt="Image 3" />
+    </section>
+
+    <!-- 4.Use @media queries to adjust layout at three distinct breakpoints. -->
+
+    <!-- 5.Animate a button’s hover effect using transition and transform properties. -->
+    <button class="animated-btn">Hover Me</button>
+
+    <script>
+      document.querySelector(".theme-toggle").addEventListener("click", () => {
+        const html = document.documentElement;
+        const current = html.getAttribute("data-theme");
+        html.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+      });
+    </script>
+  </body>
+</html>
