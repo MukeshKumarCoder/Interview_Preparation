@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Write a debounce function and apply it to an input’s keyup event for live searching. -->
+    <input type="text" id="searchInput" placeholder="Search..." />
+    <p id="value"></p>
+
+    <!-- Create a tab-switcher UI in vanilla JS that shows and hides content sections. -->
+    <div class="tabs">
+      <button class="tab-button active" data-tab="1">Tab 1</button>
+      <button class="tab-button" data-tab="2">Tab 2</button>
+      <button class="tab-button" data-tab="3">Tab 3</button>
+    </div>
+
+    <div class="tab-content active" data-tab="1">
+      <h2>Tab 1</h2>
+    </div>
+
+    <div class="tab-content" data-tab="2">
+      <h2>Tab 2</h2>
+    </div>
+
+    <div class="tab-content" data-tab="3">
+      <h2>Tab 3</h2>
+    </div>
+
+    <!-- Traverse a list of items via JS and add a CSS class to every even-indexed element. -->
+    <ul id="myList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+
+    <!-- Implement a “Back to Top” button that appears after scrolling down 200px. -->
+    <button
+      id="backToTop"
+      style="
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        padding: 10px 15px;
+        font-size: 16px;
+      "
+    >
+      ↑ Top
+    </button>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
